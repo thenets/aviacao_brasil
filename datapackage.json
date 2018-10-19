@@ -1,0 +1,70 @@
+{
+  "profile": "tabular-data-package",
+  "name": "aviacao-civil-brasil",
+  "title": "Dados anuais de ocorrências da Aviação Civil Brasileira.",
+  "description": "",
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "ocorrencies-aviacao-civil-brasil",
+      "path": "data/oco.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [{
+            "name": "codigo",
+            "title": "Código da ocorrência.",
+            "type": "number"
+          },
+          {
+            "name": "classificacao",
+            "title": "Classificação da ocorrência.",
+            "description": "Os possíveis tipos de ocorrência são: ",
+            "type": "string"
+          },
+          {
+            "name": "tipo",
+            "title": "Tipo de problema que causou a ocorrência.",
+            "description": "É geralmente o principal motivo que ocasionou a ocorrência. Não necessáriamente o único mótivo.",
+            "type": "string"
+          },
+          {
+            "name": "tipo_categoria",
+            "title": "Categoria do tipo de problema que causou a ocorrência.",
+            "type": "string"
+          },
+          {
+            "name": "cidade",
+            "title": "Cidade onde a ocorrência foi registrada.",
+            "type": "string"
+          },
+          {
+            "name": "uf",
+            "title": "Unidade federativo (UF) onde a ocorrência foi registrada.",
+            "type": "string"
+          },
+          {
+            "name": "dia",
+            "title": "Dia em que a ocorrência foi registrada.",
+            "type": "date",
+            "format": "%Y-%m-%d"
+          },
+          {
+            "name": "horario",
+            "title": "Hora em que a ocorrência foi registrada.",
+            "type": "time"
+          },
+          {
+            "name": "dia_extracao",
+            "title": "Dia em que a aeronave foi extraída, após a ocorrência.",
+            "description": "Dependendo do tipo da ocorrência, pode levar alguns dias até que a aeronave seja extraída e avaliada.",
+            "type": "date",
+            "format": "%Y-%m-%d"
+          }
+        ]
+      },
+      "primaryKey": "codigo"
+    }
+  ]
+}
